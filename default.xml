@@ -2,6 +2,7 @@
 <manifest>
   <remote  name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/" />
   <default revision="main-kernel-build-2023" remote="aosp" sync-j="4" />
+  <remote  name="krpi" fetch="https://github.com/" />
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android14-6.1-lts" />
 
@@ -14,7 +15,7 @@
     <linkfile src="abi" dest="build/abi" />
     <linkfile src="static_analysis" dest="build/static_analysis" />
   </project>
-  <project path="common" name="kernel/common" revision="android14-6.1-lts" />
+  <project path="common" name="kyndytran/android_common_kernel" remote="krpi" revision="android14-6.1-lts" />
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android14-6.1" />
